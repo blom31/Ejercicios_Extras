@@ -10,6 +10,8 @@ pagar por dicho socio.
  */
 package ejercicios_extras;
 
+import java.util.Scanner;
+
 /**
  *
  * @author blom3
@@ -20,7 +22,36 @@ public class ejercicio_5 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+
+        String opc;
+        int pago, descuento;
+        Scanner leer = new Scanner(System.in);
+
+        System.out.println("Ingrese su tipo de Afiliación, A , B o C ");
+        opc = leer.next();
+
+        if (opc.equalsIgnoreCase("A")) {
+            System.out.println("Cuenta con un descuento del 50%");
+            System.out.println("Ingrese el monto del tratamiento a realizar");
+            pago = leer.nextInt();
+            descuento = (pago * 50) / 100;
+            descuento = pago - descuento;
+            System.out.println("Su importe final es de : " + descuento);
+
+        } else if (opc.equalsIgnoreCase("B")) {
+            System.out.println("Cuenta con un descuento del 35%");
+            System.out.println("Ingrese el monto del tratamiento a realizar");
+            pago = leer.nextInt();
+            descuento = (pago * 35) / 100;
+            descuento = pago - descuento;
+            System.out.println("Su importe final es de : " + descuento);
+
+        } else if (opc.equalsIgnoreCase("C")) {
+            System.out.println("Usted no cuenta con ningún desscuento activo");
+
+        } else {
+            System.out.println("Tipo de afiliado inválido");
+
+        }
     }
-    
 }
