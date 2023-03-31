@@ -14,42 +14,32 @@ import java.util.Scanner;
  */
 public class ejercicio_8 {
 
-       public static void main(String[] args) {
-        
-        boolean salida = true;
-        int contadorPar = 0;
-        int contadorImpar = 0;
-        int contador = 0;
-        
-        do
-        {
-              System.out.println("Ingrese numeros enteros");
-              Scanner num_i = new Scanner(System.in);
-              int num = num_i.nextInt();
-             
-            contador++; 
-              
-            if (num%2==0 && num%5!=0 && num>0)
-            {
-                contadorPar++;
+    public static void main(String[] args) {
+
+        //boolean salida = true;
+        int num, cont = 0, cont_Par = 0, cont_Imp = 0;
+
+        do {
+            System.out.println("Ingrese numeros enteros");
+            Scanner leer = new Scanner(System.in);
+            num = leer.nextInt();
+            cont++;
+            if (num % 2 == 0 && num % 5 != 0 && num > 0) {
+                cont_Par++;
             }
-            
-            if (num%2==1 && num%5!=0 && num>0)    
-            {
-                contadorImpar++;
+            if (num % 2 == 1 && num % 5 != 0 && num > 0) {
+                cont_Imp++;
             }
-            
-            if (num%5==0)
-            {
-                salida = false;
-               
+            if (num % 5 == 0) {
+                break;
             }
-            
-        }while (salida);
-        
-        System.out.println("los impares son " + contadorImpar);
-        System.out.println("los pares son " + contadorPar);
-        System.out.println("los ingresos validos son " + (contadorPar+contadorImpar)); 
-       
-    } 
+
+        } while (num > 0);
+
+        System.out.println("Impares ingresados " + cont_Imp);
+        System.out.println("Pares ingresados" + cont_Par);
+        System.out.println("Números ingresados " + (cont_Par + cont_Imp));
+        System.out.println("Se rompe el ciclo al ingresar un número multiplo de 5 y este último  no se contabiliza");
+
+    }
 }
