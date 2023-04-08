@@ -17,12 +17,12 @@ public class ejercicio_2 {
      */
     public static void main(String[] args) {
         int A, B, C, D, E;
-        
-        A= 1;
+
+        A = 1;
         B = 2;
-        C =3;
+        C = 3;
         D = 4;
-        
+
         System.out.println("A = " + A + " // B = " + B + " // C = " + C + " // D = " + D);
 
         //B tome el valor de C, C tome el valor de A, A tome el valor de D y D tome el valor de B 
@@ -31,9 +31,9 @@ public class ejercicio_2 {
         C = A; // 1
         A = D; // 4
         D = E; //2
-        
+
         System.out.println("B tome el valor de C, C tome el valor de A, A tome el valor de D y D tome el valor de B");
         System.out.println("A = " + A + " // B = " + B + " // C = " + C + " // D = " + D);
     }
-    
+
 }

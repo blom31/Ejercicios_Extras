@@ -16,7 +16,7 @@ public class ejercicio_8 {
 
     public static void main(String[] args) {
 
-        //boolean salida = true;
+        
         int num, cont = 0, cont_Par = 0, cont_Imp = 0;
 
         do {
@@ -37,7 +37,7 @@ public class ejercicio_8 {
         } while (num > 0);
 
         System.out.println("Impares ingresados " + cont_Imp);
-        System.out.println("Pares ingresados" + cont_Par);
+        System.out.println("Pares ingresados " + cont_Par);
         System.out.println("Números ingresados " + (cont_Par + cont_Imp));
         System.out.println("Se rompe el ciclo al ingresar un número multiplo de 5 y este último  no se contabiliza");
 

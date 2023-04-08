@@ -20,8 +20,12 @@ public class ejercicio_4 {
         
         Scanner leer = new Scanner(System.in);
         
-        System.out.println("Ingrese un número para mostrar su equivalente en Números Romanos");
+        System.out.println("Ingrese un número entre 1 y 10 para mostrar su equivalente en Números Romanos");
         num = leer.nextInt();
+        
+        if (num>10) {
+            System.out.println("Número mayor a 10");            
+        } else {
         
         switch (num) {
             case 1:
@@ -56,6 +60,7 @@ public class ejercicio_4 {
                 break;
 
         }
+    }
     }
 
 }
